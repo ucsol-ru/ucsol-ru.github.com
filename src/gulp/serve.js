@@ -19,7 +19,7 @@ function serveTask() {
     open: false
   });
 
-  watch('./src/styles/style.css', series(styleTask, reloaded))
+  watch(['./src/styles/style.css', 'public/*.html'], series(styleTask, reloaded))
   watch('./src/scripts/*.js', series(scriptTask, reloaded))
   watch('./src/images', series(imagesTask, reloaded))
   watch('public/*.html').on('change', browserSync.reload)
