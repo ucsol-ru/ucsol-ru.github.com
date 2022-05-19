@@ -1,2 +1,77 @@
+@import 'utils/_mixins'
+@import 'utils/_vars'
 
+.container-special
+  width: 960px
+  @include container
+  
+.hero-pages
+  &__top-block,
+  &__bottom-block
+    @include flex-between
+    
+.top
+  &__left-container
+    width: 50%
+    background-color: $accent
+    height: 106px
 
+  &__right-container
+    @include flex-center
+    height: 106px
+    width: 50%
+    background-image: url('../../img/logofon.gif') 
+    background-repeat: no-repeat
+    background-position: top left
+
+.list-info
+  list-style: none
+  padding: 20px 10px
+  margin: 0
+
+  &__item
+    text-transform: uppercase
+    color: #fff
+    font-size: 16px
+    font-weight: 700
+
+.bottom
+  &__left-container
+    @include flex-between
+    width: 56%
+
+    span
+      font-weight: 700
+
+  &__right-container
+    @include flex-center
+    background-color: $accent
+    width: 44%
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%)
+
+.icons
+  @include flex-center
+  list-style: none
+  margin: 0
+  padding: 10px
+
+.numbers
+  @include flex-center
+  list-style: none
+  margin: 0
+  padding-left: 0
+
+.number
+  padding: 5px
+  font-size: 16px
+  font-weight: 700
+
+.email
+  font-weight: 700
+  color: $accent
+
+.addres
+  font-size: 16px
+  font-weight: 700
+  text-transform: uppercase
+  color: #fff
