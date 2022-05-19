@@ -1,19 +1,23 @@
 import pkg from 'gulp'
 const { src, dest } = pkg
-import postcss from 'gulp-postcss'
+import dartSass from 'sass'
+import gulpSass from 'gulp-sass'
+import autoprefixer from 'gulp-autoprefixer'
 import sourcemap from 'gulp-sourcemaps'
-import tailwindcss from 'tailwindcss'
 import cssnano from 'gulp-cssnano'
-import autoprefixer from 'autoprefixer'
-import nested from 'postcss-nested'
+
+const sass = gulpSass(dartSass)
 
 function styleTask() {
-  return src('./src/styles/style.css')
+  return src('./src/styles/**/*.sass')
+  .pipe(sass())
+  .pipe(autoprefixer({
+    cascade: false
+  }))
   .pipe(sourcemap.init())
-  .pipe(postcss([ tailwindcss('./tailwind.config.cjs'), autoprefixer, nested ]) )
   .pipe(cssnano())
   .pipe(sourcemap.write('.'))
-  .pipe(dest('public/assets/css'))
+  .pipe(dest('assets/css'))
 }
 
 export default styleTask

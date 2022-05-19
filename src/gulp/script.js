@@ -14,7 +14,7 @@ function scriptTask() {
     )
     .pipe(uglify())
     .pipe(sourcemap.write())
-    .pipe(dest('public/assets/js'))
+    .pipe(dest('assets/js'))
 }
 
 export default scriptTask

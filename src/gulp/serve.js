@@ -14,15 +14,15 @@ function reloaded(cb) {
 
 function serveTask() {
   browserSync.init({
-    server: 'public',
+    server: '',
     notify: false,
     open: false
   });
 
-  watch('./src/styles/style.css', series(styleTask, reloaded))
+  watch('./src/styles/**/*.sass', series(styleTask, reloaded))
   watch('./src/scripts/*.js', series(scriptTask, reloaded))
   watch('./src/images', series(imagesTask, reloaded))
-  watch('public/*.html').on('change', browserSync.reload)
+  watch('**/*.html').on('change', browserSync.reload)
 }
 
 export default serveTask

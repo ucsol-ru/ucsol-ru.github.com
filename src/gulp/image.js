@@ -10,7 +10,7 @@ function imagesTask() {
       interlaced: true,
       optimizationLevel: 3,
     }))
-    .pipe(dest('public/img'))
+    .pipe(dest('img'))
 }
 
 export default imagesTask
