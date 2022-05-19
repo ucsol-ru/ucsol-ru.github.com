@@ -17,7 +17,7 @@ function styleTask() {
   .pipe(sourcemap.init())
   .pipe(cssnano())
   .pipe(sourcemap.write('.'))
-  .pipe(dest('public/assets/css'))
+  .pipe(dest('assets/css'))
 }
 
 export default styleTask
