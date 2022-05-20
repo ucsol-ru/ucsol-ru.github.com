@@ -15,8 +15,6 @@ function reloaded(cb) {
 function serveTask() {
   browserSync.init({
     server: '',
-    notify: false,
-    open: false
   });
 
   watch('./src/styles/**/*.sass', series(styleTask, reloaded))

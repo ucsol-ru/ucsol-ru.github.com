@@ -9,11 +9,13 @@
   &__top-block,
   &__bottom-block
     @include flex-between
-    
+
+.hero-pages__top-block
+  background-color: $accent    
+
 .top
   &__left-container
     width: 50%
-    background-color: $accent
     height: 106px
 
   &__right-container
@@ -23,6 +25,8 @@
     background-image: url('../../img/logofon.gif') 
     background-repeat: no-repeat
     background-position: top left
+    background-size: cover
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%)
 
 .list-info
   list-style: none
