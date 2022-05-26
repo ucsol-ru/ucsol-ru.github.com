@@ -9,7 +9,7 @@ import cssnano from 'gulp-cssnano'
 const sass = gulpSass(dartSass)
 
 function styleTask() {
-  return src('./src/styles/**/*.sass')
+  return src(['./src/styles/**/*.scss', './src/styles/**/*.sass'])
   .pipe(sass())
   .pipe(autoprefixer({
     cascade: false
@@ -21,3 +21,4 @@ function styleTask() {
 }
 
 export default styleTask
+

@@ -1,4 +1,4 @@
-import pkg from 'gulp'
+import pkg from 'gulp' 
 const { parallel } = pkg
 import serveTask from './src/gulp/serve.js'
 import styleTask from './src/gulp/style.js'

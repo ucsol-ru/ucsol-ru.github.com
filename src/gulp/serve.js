@@ -17,7 +17,7 @@ function serveTask() {
     server: '',
   });
 
-  watch('./src/styles/**/*.sass', series(styleTask, reloaded))
+  watch(['./src/styles/**/*.sass', './src/styles/**/*.scss'], series(styleTask, reloaded))
   watch('./src/scripts/*.js', series(scriptTask, reloaded))
   watch('./src/images', series(imagesTask, reloaded))
   watch('**/*.html').on('change', browserSync.reload)
