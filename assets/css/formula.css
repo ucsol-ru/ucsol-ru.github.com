@@ -1,2 +1,2 @@
-.form-wrap{display:flex;justify-content:center;align-items:center;height:100vh;width:auto}
+.form-wrap{display:flex;justify-content:center;align-items:center;height:100vh;width:auto}.form-wrap label{font-size:1.2rem}.convert-form{display:flex;flex-direction:column;align-items:flex-end;padding:20px;background-color:teal}.convert-input{width:200px;font-size:1.2rem}
 /*# sourceMappingURL=formula.css.map */
