@@ -4,7 +4,7 @@ import imagemin from 'gulp-imagemin'
 
 
 function imagesTask() {
-  return src('./src/images/*.*')
+  return src('./src/images/**/*.*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{ removeViewBox: false }],

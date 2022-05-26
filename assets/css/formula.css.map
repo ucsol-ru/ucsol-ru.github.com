@@ -1,0 +1,1 @@
+{"version":3,"sources":["formula.css"],"names":[],"mappings":"AAAA,WACE,aAAc,AACd,uBAAwB,AACxB,mBAAoB,AACpB,aAAc,AACd,UAAY,CACb","file":"formula.css","sourcesContent":[".form-wrap {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  width: auto;\n}"]}
