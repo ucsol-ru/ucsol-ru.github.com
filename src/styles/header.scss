@@ -1,0 +1,44 @@
+@import 'utils/_vars.sass';
+
+.container-special {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.hero-flex {
+  display: flex;
+  background-color: $accent;
+}
+
+@media (min-width: 576px) {
+  .container-special {
+    max-width: 540px;
+  }
+}
+ 
+@media (min-width: 768px) {
+  .container-special{
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-special{
+    max-width: 960px;
+  }
+
+  .hero-flex {
+    flex-direction: column;
+
+    .hero-flex__item {
+      justify-content: space-between;
+      align-items: center;
+    }
+      &:last-child {
+        background-color: #fff;
+      }
+  }
+}

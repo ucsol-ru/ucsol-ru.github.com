@@ -2,25 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="../assets/css/libs/normalize.css">
   <link rel="stylesheet" href="../assets/css/formula.css">
   <link rel="stylesheet" href="../assets/css/formula.css.map">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <title>Formula</title>
 </head>
 <body>
-  <div class="form-wrap">
+  <div class="container">
+    <h1>Перевод КВТ в ЛС</h1>
     <form class="convert-form">
-      <legend>Конвертер КВТ в ЛС</legend>
       <p>
         <label for="kwt">кВт</label>
-        <input name="kwt" id="kwt-input" class="convert-input" type="number" value="1">
+        <input name="kwt" id="kwt-input" class="convert-form__input" type="number" value="1">
       </p>
       <p>
         <label for="hp">л.с</label>
-        <input name="hp" id="hp-input" class="convert-input" type="number" value="1.36">
+        <input name="hp" id="hp-input" class="convert-form__input" type="number" value="1.36">
       </p>
+      <button id="reset-form" class="convert-form__button">Сбросить</button>
     </form>
   </div>
-
   <script src="../assets/js/formula.js"></script>
 </body>
 </html>
