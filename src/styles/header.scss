@@ -1,4 +1,9 @@
 @import 'utils/_vars.sass';
+@import 'utils/_mixins.sass';
+
+body {
+  font-family: 'PT Sans', sans-serif;
+}
 
 .container-special {
   width: 100%;
@@ -10,35 +15,161 @@
 
 .hero-flex {
   display: flex;
+  @include flex-between;
+  flex-direction: column;
   background-color: $accent;
-}
-
-@media (min-width: 576px) {
-  .container-special {
-    max-width: 540px;
+  &__item {
+    @include flex-between;
+    &:last-child {
+      background-color: #fff;
+    }
   }
 }
- 
-@media (min-width: 768px) {
+
+.list-info {
+  width: 55%;
+  list-style: none;
+  padding: 20px 10px;
+  margin: 0;
+  &__item {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.logo-wrap {
+  @include flex-center;
+  background-image: url(../../img/logofon.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+  width: 45%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+  border: 1px solid #fff;
+}
+
+.group-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 62.5%;
+}
+
+.address-wrap {
+  @include flex-center;
+  background-color: $accent;
+  padding: 10px 0;
+  width: 37.5%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+}
+
+.icons {
+  @include flex-center;
+  list-style: none;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.numbers {
+  @include flex-center;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  &::before {
+    content: 'Тел:';
+    font-weight: 700;
+  }
+}
+
+.number {
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  &:first-child {
+    &::after {
+      content: ',';
+    }
+  }
+}
+
+.email {
+  font-weight: 700;
+  color: $accent;
+}
+
+.address {
+  background-color: $accent;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
   .container-special{
-    max-width: 720px;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero-flex {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    &__item {
+      &:first-child {
+        justify-content: end;
+        width: 30%;
+      }
+      &:last-child {
+        justify-content: start;
+        background-color: $accent;
+        color: #fff;
+        width: 70%;
+      }
+    }
+  }
+
+  .list-info,
+  .address-wrap,
+  .icons {
+    display: none;
+  }
+
+  .email {
+    color: #fff;
+  }
+
+  .logo-wrap {
+    clip-path: none;
+    width: 100%;
+  }
+
+  .group-info {
+    justify-content: start;
+    flex-direction: column;
+  }
+
+  .numbers {
+    flex-direction: column;
+    &::before {
+      content: none;
+    }
+  }
+
+  .number:first-child::after {
+    content: none;
   }
 }
 
 @media (min-width: 992px) {
   .container-special{
     max-width: 960px;
-  }
-
-  .hero-flex {
-    flex-direction: column;
-
-    .hero-flex__item {
-      justify-content: space-between;
-      align-items: center;
-    }
-      &:last-child {
-        background-color: #fff;
-      }
   }
 }
