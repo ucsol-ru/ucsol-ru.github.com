@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @import 'utils/_vars.sass';
 @import 'utils/_mixins.sass';
 
@@ -69,11 +71,14 @@ body {
   @include flex-center;
   list-style: none;
   margin: 0;
-  padding: 5px 0;
+  padding-left: 10px;
 }
 
 .icon {
-  margin-right: 5px;
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0
+  }
 }
 
 .numbers {
@@ -103,7 +108,7 @@ body {
   color: $accent;
 }
 
-.address {
+.address-header {
   background-color: $accent;
   font-size: 14px;
   font-weight: 700;
@@ -125,13 +130,13 @@ body {
     &__item {
       &:first-child {
         justify-content: end;
-        width: 30%;
+        width: 40%;
       }
       &:last-child {
         justify-content: start;
         background-color: $accent;
         color: #fff;
-        width: 70%;
+        width: 60%;
       }
     }
   }
@@ -151,7 +156,12 @@ body {
     width: 100%;
   }
 
+  .logo {
+    width: 30%;
+  }
+
   .group-info {
+    padding: 10px;
     justify-content: start;
     flex-direction: column;
   }
