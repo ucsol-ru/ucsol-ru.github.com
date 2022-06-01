@@ -3,10 +3,17 @@ window.addEventListener('load', () => {
   const inputKwt = document.getElementById('kwt-input')
   const resetButton = document.getElementById('reset-form')
 
+
+  function resetInput() {
+    inputHp.value = ''
+    inputHp.placeholder = '0'
+    inputKwt.value = ''
+    inputKwt.placeholder = '0'
+  }
+
   resetButton.addEventListener('click', (e) => {
     e.preventDefault()
-    inputHp.value = 0
-    inputKwt.value = 0
+    resetInput()
   })
 
   inputHp.addEventListener('keyup', () => {
@@ -17,5 +24,12 @@ window.addEventListener('load', () => {
   inputKwt.addEventListener('keyup', () => {
     let result = inputKwt.value / 0.74
     inputHp.value = result.toFixed(2)
-  })  
+  })
+
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Enter') {
+      e.preventDefault()
+      resetInput() 
+    }
+  })
 })
