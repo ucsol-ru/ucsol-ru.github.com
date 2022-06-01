@@ -1,35 +1,62 @@
 window.addEventListener('load', () => {  
   const inputHp = document.getElementById('hp-input')
   const inputKwt = document.getElementById('kwt-input')
+  const allInputs = document.querySelectorAll('.convert-form__input')
   const resetButton = document.getElementById('reset-form')
 
+  // coefficients
+  const cKwt = 1.3596
+  const cHp = 0.7355
 
-  function resetInput() {
-    inputHp.value = ''
-    inputHp.placeholder = '0'
-    inputKwt.value = ''
-    inputKwt.placeholder = '0'
+  // formula
+  function calcFunc (aInput, bInput, cf) {
+    const result = aInput.value / cf
+    bInput.value = result.toFixed(2)
   }
 
-  resetButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    resetInput()
+  // claer inputs func
+  function resetFunc () {
+    allInputs.forEach((input) => {
+      input.value = ''
+      input.ariaPlaceholder = '0'
+    })
+  }
+
+  // remove Null function
+  function rmNull(input) {
+    if (input.value == 0.00) {
+      input.value = ''
+    }
+  }
+
+  // handlers
+  inputKwt.addEventListener('keyup', () => {
+    calcFunc(inputKwt, inputHp, cHp)
   })
 
   inputHp.addEventListener('keyup', () => {
-    let result = inputHp.value / 1.36
-    inputKwt.value = result.toFixed(2)
+    calcFunc(inputHp, inputKwt, cKwt)
   })
 
-  inputKwt.addEventListener('keyup', () => {
-    let result = inputKwt.value / 0.74
-    inputHp.value = result.toFixed(2)
+  // reset handler
+  resetButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    resetFunc()
   })
 
   document.addEventListener('keydown', (e) => {
     if (e.code === 'Enter') {
       e.preventDefault()
-      resetInput() 
+      resetFunc() 
     }
+  })
+
+  // focus input handlers
+  inputKwt.addEventListener('focus', ()=> {
+    rmNull(inputKwt)
+  })
+  
+  inputHp.addEventListener('focus', ()=> {
+    rmNull(inputHp)
   })
 })
