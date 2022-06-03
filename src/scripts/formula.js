@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {  
+document.addEventListener('load', () => {  
   const inputHp = document.getElementById('hp-input')
   const inputKwt = document.getElementById('kwt-input')
   const allInputs = document.querySelectorAll('.convert-form__input')
@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
   // formula
   function calcFunc (aInput, bInput, cf) {
     const result = aInput.value / cf
-    bInput.value = result.toFixed(2)
+    bInput.value = result.toFixed(2)    
   }
 
   // claer inputs func
@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
   })
 
   inputHp.addEventListener('keyup', () => {
-    calcFunc(inputHp, inputKwt, cKwt)
+    calcFunc(inputHp, inputKwt, cKwt,)
   })
 
   // reset handler
