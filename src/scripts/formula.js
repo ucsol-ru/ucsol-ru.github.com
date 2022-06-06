@@ -1,4 +1,4 @@
-document.addEventListener('load', () => {  
+document.addEventListener('DOMContentLoaded', () => {  
   const inputHp = document.getElementById('hp-input')
   const inputKwt = document.getElementById('kwt-input')
   const allInputs = document.querySelectorAll('.convert-form__input')
