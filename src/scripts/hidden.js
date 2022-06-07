@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
   const form = document.querySelector('.convert-form')
 
   accordionBtn.addEventListener('click', ()=> {
-    form.classList.toggle('active')
+    accordionBtn.classList.toggle('active')
+    form.classList.toggle('visible')
   })
 
 })

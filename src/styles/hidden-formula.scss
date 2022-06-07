@@ -4,14 +4,24 @@
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  position: relative;
+}
+
+.modal {
+  &__wrap {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    left: 0;
+  }
+  &__container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .modal-formula {
-  position: fixed;
-  width: 960px;
-  z-index: 1000;
-  bottom: 0;
   box-shadow: 0 0 10px rgba(34, 34, 34, 0.609);
 }
 
@@ -44,20 +54,28 @@
 }
 
 .convert-form {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  padding: 20px;
+  max-height: 0;
   background-color: #e4e4e4;
+  transition: max-height 0.2s ease-out;
   p {
     padding: 20px;
     font-size: 1.2rem;
   }
 }
 
+.visible {
+  max-height: 107px;
+}
+
 .active {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  &::after {
+    content: "\2212";
+    color: #fff;
+  }
 }
 
 .convert-form__input {
