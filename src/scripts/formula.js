@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const inputKwt = document.getElementById('kwt-input')
   const allInputs = document.querySelectorAll('.convert-form__input')
   const resetButton = document.getElementById('reset-form')
+  const accordionBtn = document.querySelector('.modal-formula__accordion-button')
+  const form = document.querySelector('.convert-form')
 
   // coefficients
   const cKwt = 1.3596
@@ -30,6 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // handlers
+  accordionBtn.addEventListener('click', ()=> {
+    accordionBtn.classList.toggle('accordion-button_active')
+    form.classList.toggle('convert-formula_visible')
+  })
+
   inputKwt.addEventListener('keyup', () => {
     calcFunc(inputKwt, inputHp, cHp)
   })

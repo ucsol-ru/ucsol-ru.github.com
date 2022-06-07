@@ -67,11 +67,11 @@
   }
 }
 
-.visible {
+.convert-formula_visible {
   max-height: 107px;
 }
 
-.active {
+.accordion-button_active {
   &::after {
     content: "\2212";
     color: #fff;
