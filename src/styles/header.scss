@@ -42,14 +42,26 @@ body {
 }
 
 .logo-wrap {
-  @include flex-center;
-  background-image: url(../../img/logofon.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   width: 45%;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
   border: 1px solid #fff;
+}
+
+.logo-video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo-image {
+  position: relative;
 }
 
 .group-info {

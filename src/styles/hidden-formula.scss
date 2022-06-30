@@ -8,16 +8,10 @@
 
 .modal {
   &__wrap {
-    width: 100%;
     position: fixed;
     z-index: 1000;
-    bottom: 0;
-    left: 0;
-  }
-  &__container {
-    width: 960px;
-    margin-left: auto;
-    margin-right: auto;
+    bottom: 10%;
+    left: 1%;
   }
 }
 
@@ -55,20 +49,26 @@
 
 .convert-form {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   overflow: hidden;
   max-height: 0;
   background-color: #e4e4e4;
   transition: max-height 0.2s ease-out;
+  &__inputs {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
   p {
+    margin: 0;
     padding: 20px;
     font-size: 1.2rem;
   }
 }
 
 .convert-formula_visible {
-  max-height: 107px;
+  max-height: 200px;
 }
 
 .accordion-button_active {
@@ -90,6 +90,7 @@
 .convert-form__button {
   font-size: 1.2rem;
   text-transform: uppercase;
+  margin-bottom: 35px;
   padding: 5px 10px;
   border-radius: 20px;
   border: none;

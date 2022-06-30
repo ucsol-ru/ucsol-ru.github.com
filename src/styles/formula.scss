@@ -10,20 +10,6 @@ body {
   margin-right: auto;
 }
 
-.convert-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: #e4e4e4;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(34, 34, 34, 0.609);
-  p {
-    padding: 20px;
-    font-size: 1.2rem;
-  }
-}
-
 .convert-form__input {
   font-size: 1.2rem;
   &::-webkit-inner-spin-button,

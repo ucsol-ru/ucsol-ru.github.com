@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../assets/css/libs/normalize.css">
-  <link rel="stylesheet" href="../assets/css/formula.css">
-  <link rel="stylesheet" href="../assets/css/formula.css.map">
+  <link rel="stylesheet" href="../assets/css/formula-full.css">
+  <link rel="stylesheet" href="../assets/css/formula-full.css.map">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -13,18 +13,18 @@
 <body>
   <div class="container container-xs">
     <h1>Перевод КВТ в ЛС</h1>
-    <form class="convert-form">
+    <form class="convert-full">
       <p>
         <label for="kwt">кВт</label>
-        <input name="kwt" id="kwt-input" class="convert-form__input" type="number" placeholder="1">
+        <input name="kwt" id="kwt-input" class="convert-full__input" type="number" placeholder="1">
       </p>
       <p>
         <label for="hp">л.с</label>
-        <input name="hp" id="hp-input" class="convert-form__input" type="number" placeholder="1.36">
+        <input name="hp" id="hp-input" class="convert-full__input" type="number" placeholder="1.36">
       </p>
-      <button id="reset-form" class="convert-form__button">Сбросить</button>
+      <button id="reset-form" class="convert-full__button">Сбросить</button>
     </form>
   </div>
-  <script src="../assets/js/formula.js"></script>
+  <script src="../assets/js/old_formula.js"></script>
 </body>
 </html>
