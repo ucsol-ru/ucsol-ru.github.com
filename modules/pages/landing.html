@@ -8,141 +8,291 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/landing.css">
   <link rel="stylesheet" href="/assets/css/landing-responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
   <title>Landing Page</title>
 </head>
 <body>
   <div class="container">
-    <h1>Таможенный брокер для физических и юридических лиц</h1>
-    <section>
-      <h2>Уважаемый посетитель!</h2>
+    <h1 class="heading">Таможенный брокер для физических и юридических лиц</h1>
+    <section class="main-about">
+      <h2 class="heading">Уважаемый посетитель!</h2>
       <p>
         Нашей командой специалистов осуществляются услуги по международной перевозке грузов из любых стран мира, таможенному оформлению абсолютно любых товаров на любых таможнях Российской Федерации в различных таможенных режимах, сертификации товаров и страхованию грузов.
       </p>
       <p>
-        Профессиональной задачей является оказание услуг Высочайшего качества по разумной цене.
+        Профессиональной задачей является оказание услуг <b>Высочайшего качества</b> по разумной цене.
       </p>
+      <img src="/img/pod.webp" width="400" height="100" loading="lazy" alt="подпись">    
     </section>
-    <section>
-      <h2>Мы оказываем помощь клиентам в сфере</h2>
-      <ul>
-        <li>Международной перевозке грузов</li>
-        <li>Таможенного оформления</li>
-        <li>Сертификации товаров</li>
-        <li>Страхованию грузов</li>
-        <li>и любых сопутствующих услуг</li>
+    <section class="main-help">
+      <h2 class="heading">Мы оказываем помощь клиентам в сфере</h2>
+      <div class="main-help__wrap">
+        <div class="main-help__text">
+          <ul class="main-help__list page-list">
+            <li class="main-help__item">
+              <a class="main-help__link" title="Международной перевозке грузов" href="/mezhdunarodnye-gruzoperevozki">Международной перевозке грузов</a>
+            </li>
+            <li class="main-help__item">
+              <a class="main-help__link" title="Таможенное оформление" href="/tamozhennoe-oformlenie">Таможенного оформления</a>
+            </li>
+            <li class="main-help__item">
+              <a class="main-help__link" title="Сертификация товаров" href="/sertifikatsiya">Сертификации товаров</a>
+            </li>
+            <li class="main-help__item">
+              <a class="main-help__link" title="Страхование грузов" href="/strakhovanie-gruzov">Страхованию грузов</a>
+            </li>
+            <li class="main-help__item">
+              <span class="main-help__link">и любых сопутствующих услуг</span> 
+            </li>
+          </ul>
+        </div>
+        <div class="video-wrap">
+          <video src="/video/intro.webm" width="450" controls poster="/img/video-cover.jpg"></video>
+        </div>
+      </div>
+    </section>
+    <section class="main-clients">
+      <h2 class="heading">Наши клиенты</h2>
+      <p>Наша компания одна из немногих компаний представленных на Российском рынке работающая с любыми участниками ВЭД:</p>
+      <ul class="clients-list page-list">
+        <li class="clients-list__item">
+          <a class="clients-list__card" title="Участники ВЭД физические лица" href="/uchastniki-ved/fizicheskoe-litso">
+            <h4 class="clients-list__heading">Физическими лицами</h4>
+            <p>Подробнее</p>
+            <span class="list-number">01</span>
+          </a>
+        </li>
+        <li class="clients-list__item">
+          <a class="clients-list__card" title="Участники ВЭД юридические лица" href="/uchastniki-ved/yuridicheskoe-litso">
+            <h4 class="clients-list__heading">Юридическими лицами</h4>
+            <p>Подробнее</p>
+            <span class="list-number">02</span> 
+          </a>
+        </li>
+        <li class="clients-list__item">
+          <a class="clients-list__card" title="Участники ВЭД Индивидуальные предприниматели" href="/uchastniki-ved/individualnye-predprinimateli">
+            <h4 class="clients-list__heading">Индивидуальными предпринимателями</h4>
+            <p>Подробнее</p>
+            <span class="list-number">03</span> 
+          </a>
+        </li>
       </ul>
+      <a href="/uchastniki-ved" class="page-link">Узнать больше</a>
     </section>
-    <section>
-      <h2>Наши клиенты</h2>
-      <ul>
-        <li>Физическими лицами</li>
-        <li>Юридическими лицами</li>
-        <li>Индивидуальными предпринимателями</li>
+    <section class="main-cargo">
+      <h2 class="heading">Международные грузовые перевозки</h2>
+      <div class="main-cargo__wrap">
+        <div class="main-cargo__text">
+          <p>
+            Международные перевозки грузов и таможенное оформление являются одной из важнейших составляющих внешнеэкономической деятельности. 
+          </p>
+          <p>
+            Нами осуществляются перевозки любых грузов из любых стран мира: по земле, воде и воздуху. Для этих целей наша компания имеет как собственный транспорт, так и сервисные договора с крупнейшими морскими, железнодорожными, автомобильными и воздушными авиаперевозчиками.
+          </p>
+          <p>
+            Мы делаем все для того, чтобы международные транспортные перевозки прошли максимально быстро и надежно.
+          </p>
+        </div>
+        <ul class="cargo-list page-list">
+          <li class="cargo-list__item">
+            Нами оказываются следующие транспортные <br> <b>услуги по доставке грузов</b>
+          </li>
+          <li class="cargo-list__item">
+            <a href="/gruzoperevozki/mezhdunarodnye-avtomobilnye-perevozki">
+              <img class="cargo-list__cover" src="/img/landing/auto.webp" width="150" height="150" alt="автоперевозки">
+              <div class="cargo-list__text-wrap">
+                <h4>Автомабильным транспортом</h4>
+              </div>
+            </a>
+          </li>
+          <li class="cargo-list__item">
+            <a href="/gruzoperevozki/sea">
+              <img class="cargo-list__cover" src="/img/landing/ship.webp" width="150" height="150" alt="морские перевозки">
+              <div class="cargo-list__text-wrap">
+                <h4>Морским транспортом</h4>
+              </div>
+            </a>
+          </li>
+          <li class="cargo-list__item">
+            <a href="/gruzoperevozki/mezhdunarodnye-zheleznodorozhnye-perevozki">
+              <img class="cargo-list__cover" src="/img/landing/train.webp" width="150" height="150" alt="морские перевозки">
+              <div class="cargo-list__text-wrap">
+                <h4>Железнодорожным траспортом</h4>
+              </div>
+            </a>
+          </li>
+          <li class="cargo-list__item">
+            <a href="/gruzoperevozki/mezhdunarodnye-aviaperevozki-gruzov">
+              <img class="cargo-list__cover" src="/img/landing/plane.webp" width="150" height="150" alt="морские перевозки">
+              <div class="cargo-list__text-wrap">
+                <h4>Авиационным траспортом</h4>
+              </div>
+            </a>
+          </li>
+          <li class="cargo-list__item">
+            <a href="/gruzoperevozki/multimodalnye-perevozki-gruzov">
+              <img class="cargo-list__cover" src="/img/landing/multi.webp" width="150" height="150" alt="морские перевозки">
+              <div class="cargo-list__text-wrap">
+                <h4>Мультимодальным траспортом</h4>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a href="/mezhdunarodnye-gruzoperevozki" class="page-link">Узнать больше</a>
+    </section>
+    <section class="main-paperwork">
+      <h2 class="heading">Таможенное оформление</h2>
+      <p>
+        Специалистами нашей компании <b>«Универсальные Грузовые Решения»</b> оказываются услуги по таможенному оформлению всех видов грузов и товаров, как для личного пользования, так и для коммерческого (например: таможенный брокер Москва или любые другие места и города таможенного оформления) в любых таможенных режимах:
+      </p>
+      <ul class="main-paperwork__list page-list">
+        <li class="main-paperwork__item">
+          <a href="/tamozhennye-uslugi/tamozhennoe-oformlenie-importa" class="main-paperwork__card">
+            <img class="paperwork__image" src="/img/landing/import.webp" width="235" height="150" alt="Импорт">
+            <p class="paperwork__text">Импорт</p>
+          </a>
+        </li>
+        <li class="main-paperwork__item">
+          <a href="/rastamozhka" class="main-paperwork__card">
+            <img class="paperwork__image" src="/img/landing/truck2.webp" width="235" height="150" alt="Растаможка">
+            <p class="paperwork__text">Растаможка</p>
+          </a>
+        </li>
+        <li class="main-paperwork__item">
+          <a href="/tamozhennye-uslugi/eksportnoe-tamozhennoe-oformlenie" class="main-paperwork__card">
+            <img class="paperwork__image" src="/img/landing/car.webp" width="235" height="150" alt="Экспорт">
+            <p class="paperwork__text">Экспорт</p>
+          </a> 
+        </li>
+        <li class="main-paperwork__item">
+          <a href="/tamozhennye-uslugi/zatamozhka" class="main-paperwork__card">
+            <img class="paperwork__image" src="/img/landing/containers.webp" width="235" height="150" alt="Затаможка">
+            <p class="paperwork__text">Затаможка</p>
+          </a> 
+        </li>
+        <li class="main-paperwork__item">
+          <a href="/tamozhennye-uslugi/oformlenie-vtt" class="main-paperwork__card">
+            <img class="paperwork__image" src="/img/landing/truck3.webp" width="235" height="150" alt="Внутренний таможенный транзит">
+            <p class="paperwork__text">Внутренний таможенный транзит</p>
+          </a> 
+        </li>
+        <li class="main-paperwork__item">
+          <a href="/tamozhennye-uslugi/vremennyj-vvoz" class="main-paperwork__card">
+            <img class="paperwork__image" src="/img/landing/containers2.webp" width="235" height="150" alt="ременный ввоз">
+            <p class="paperwork__text">Временный ввоз</p>
+          </a> 
+        </li>
+        <li class="main-paperwork__item">
+          <a href="/tamozhennye-uslugi/vremennyj-vyvoz" class="main-paperwork__card">
+            <img class="paperwork__image" src="/img/landing/airoport.webp" width="235" height="150" alt="Временный вывоз">
+            <p class="paperwork__text">Временный вывоз</p>
+          </a> 
+        </li>
+        <li class="main-paperwork__item">
+          <a href="/tamozhennye-rezhimy" class="main-paperwork__card">
+            <img class="paperwork__image" src="/img/landing/other.webp" width="235" height="150" alt="Другие">
+            <p class="paperwork__text">Другие</p>
+          </a> 
+        </li>
       </ul>
-      <a href="">Узнать больше</a>
+      <a href="/tamozhennoe-oformlenie" class="page-link">Узнать больше</a>
     </section>
-    <section>
-      <h2>Международные грузовые перевозки</h2>
+    <section class="main-certificate">
+      <h2 class="heading">Сертификация товаров</h2>
       <p>
-        Международные перевозки грузов и таможенное оформление являются одной из важнейших составляющих внешнеэкономической деятельности. Нами осуществляются перевозки любых грузов из любых стран мира: по земле, воде и воздуху. Для этих целей наша компания имеет как собственный транспорт, так и сервисные договора с крупнейшими морскими, железнодорожными, автомобильными и воздушными авиаперевозчиками. Мы делаем все для того, чтобы международные транспортные перевозки прошли максимально быстро и надежно...
+        <b>Мы проводим сертификацию товаров</b>, как обязательной, необходимой для таможенных целей и торговли, так и добровольной, подтверждающей качество продукции. К ним относятся:
       </p>
-      <ul>
-        <li>Автомабильным транспортом</li>
-        <li>Морским транспортом</li>
-        <li>Железнодорожным траспортом</li>
-        <li>Авиационным траспортом</li>
-        <li>Мультимодальным траспортом</li>
+      <ul class="main-certificate__list page-list">
+        <li class="main-certificate__item">
+          <img src="/img/landing/decl.webp" width="233" height="300" alt="Декларация о соответствии"> 
+          <h4>Декларация о соответствии</h4>
+        </li>
+        <li class="main-certificate__item">
+          <img src="/img/landing/sert.webp" width="233" height="300" alt="Сертификат соответствия"> 
+          <h4>Сертификат соответствия</h4>
+        </li>
+        <li class="main-certificate__item">
+          <img src="/img/landing/sgr.webp" width="233" height="300" alt="Свидетельство о государственной регистрации">
+          <h4>Свидетельство о государственной регистрации</h4> 
+        </li>
+        <li class="main-certificate__item">
+          <img src="/img/landing/spirt.webp" width="233" height="300" alt="Протокол спиртосодержания"> 
+          <h4>Протокол спиртосодержания</h4>
+        </li>
       </ul>
+      <a href="/sertifikatsiya" class="page-link text-center">Посмотреть все документы для сертификации</a>
     </section>
-    <section>
-      <h2>Таможенное оформление</h2>
-      <p>
-        Специалистами нашей компании «Универсальные Грузовые Решения» оказываются услуги по таможенному оформлению всех видов грузов и товаров, как для личного пользования, так и для коммерческого (например: таможенный брокер Москва или любые другие места и города таможенного оформления)
-      </p>
-      <ul>
-        <li>Импорт</li>
-        <li>Растаможка</li>
-        <li>Экспорт</li>
-        <li>Затаможка</li>
-        <li>Внутренний таможенный транзит</li>
-        <li>Временный ввоз</li>
-        <li>Временный вывоз</li>
-        <li>Другие</li>
-      </ul>
-      <a href="">Узнать больше</a>
+    <section class="main-insurance">
+      <h2 class="heading">Страхование грузов</h2>
+      <div class="main-insurance__wrap">
+        <div class="main-insurance__text">
+          <p>
+            Нашей компанией оказываются услуги по страхованию грузов, перевозимых различными видами транспорта: автомобильным, авиационным, морским, железнодорожным и комбинированным.
+          </p>
+          <p>
+            <b>Страхование грузов</b> - залог спокойствия и уверенности!
+          </p>
+        </div>
+        <div class="main-insurance__image">
+          <img src="/img/landing/insurence.webp" width="350" height="250" alt="Страхование">
+        </div>
+      </div>
+      <a href="/strakhovanie-gruzov" class="page-link">Узнать больше</a>
     </section>
-    <section>
-      <h2>Сертификация товаров</h2>
-      <p>
-        Мы проводим сертификацию товаров, как обязательной, необходимой для таможенных целей и торговли, так и добровольной, подтверждающей качество продукции. К ним относятся:
-      </p>
-      <ul>
-        <li>Декларация о соответствии</li>
-        <li>Сертификат соответствия</li>
-        <li>Свидетельство о государственной регистрации</li>
-        <li>Протокол спиртосодержания</li>
-        <li>Пожарный сертификат</li>
-      </ul>
-      <a href="">Узнать больше</a>
-    </section>
-    <section>
-      <h2>Страхование грузов</h2>
-      <p>
-        Нашей компанией оказываются услуги по страхованию грузов, перевозимых различными видами транспорта: автомобильным, авиационным, морским, железнодорожным и комбинированным.
-      </p>
-      <p>
-        <b>Страхование грузов</b> - залог спокойствия и уверенности!
-      </p>
-      <a href="">Узнать больше</a>
-    </section>
-    <section>
-      <h2>Стоимость наших услуг</h2>
+    <section class="main-cost">
+      <h2 class="heading">Стоимость наших услуг</h2>
       <p>Мы оказываем услуги высочайшего качества по максимально низкой стоимости своими силами без привлечения посредников!</p>
-      <ul>
-        <li>
-          <a href="">
+      <ul class="main-cost__list page-list">
+        <li class="main-cost__item">
+          <a class="main-cost__link" href="">
             <h3>Международные перевозки</h3>
-            <p>(Взависимости от транспорта)</p>
+            <small>(Взависимости от транспорта)</small>
             <p>От 0,5 евро/км</p>
           </a>
         </li>
-        <li>
-          <a href="">
+        <li class="main-cost__item">
+          <a class="main-cost__link" href="">
             <h3>Страхование грузов</h3>
             <p>0,35 от стоимости груза</p>
           </a>
         </li>
-        <li>
-          <a href="">
+        <li class="main-cost__item">
+          <a class="main-cost__link" href="">
             <h3>Сертификация товаров</h3>
+            <small>(В зависимости от задач)</small>
             <p>От 2000 руб.</p>
           </a>
         </li>
-        <li>
-          <a href="">
+        <li class="main-cost__item">
+          <a class="main-cost__link" href="">
             <h3>Таможенное оформление физических лиц</h3>
             <p>От 3000 руб. до 8000 руб.</p>
           </a>
         </li>
-        <li>
-          <a href="">
+        <li class="main-cost__item">
+          <a class="main-cost__link" href="">
             <h3>Таможенное оформление юридических лиц и индивидуальных предпринимателей</h3>
             <p>От 3000 руб. до 22500 руб.</p>
           </a>
         </li>
       </ul>
     </section>
-    <section>
+    <section class="main-calculation">
       <p>
-        Специалистами нашей компании бесплатно оказываются услуги по консультированию, калькуляции и оптимизации затрат
+        <b>Специалистами нашей компании бесплатно оказываются услуги</b><br> по консультированию, калькуляции и оптимизации затрат
       </p>
-      <ul>
-        <li>Расчёта стоимости услуги за перевозку груза</li>
-        <li>Расчёта стоимости услуги за таможенное оформление</li>
-        <li>Расчёта стоимости услуги по сертификации</li>
-        <li>Расчёта стоимости услуги по страхованию</li>
+      <ul class="main-calculation__list page-list">
+        <li class="main-calculation__item"><a href="">Расчёта стоимости услуги за перевозку груза</a></li>
+        <li class="main-calculation__item"><a href="">Расчёта стоимости услуги за таможенное оформление</a></li>
+        <li class="main-calculation__item"><a href="">Расчёта стоимости услуги по сертификации</a></li>
+        <li class="main-calculation__item"><a href="">Расчёта стоимости услуги по страхованию</a></li>
       </ul>
-      <a href="">Оставить заявку</a>
+      <div>
+        <a href="" class="page-button_white">Оставить заявку</a>
+      </div>
     </section>
   </div>
 </body>
