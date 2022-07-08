@@ -1,0 +1,87 @@
+@media (max-width: 576px) {
+  .main-about img{
+    width: 90%;
+    height: auto;
+  }
+  .cargo-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-paperwork__list {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .clients-list {
+    grid-template-columns: 1fr;
+  }
+  .main-certificate__item img {
+    width: 100%;
+    height: auto;
+  }
+  .main-insurance__wrap {
+    flex-direction: column;
+  }
+
+  .main-insurance__text {
+    width: 100%;
+    text-align: justify;
+  }
+
+  .main-insurance__image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .main-cost__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .main-cost__list {
+    grid-template-columns: 1fr;
+  }
+
+  .main-cost__item:last-child {
+    grid-column: auto;
+  }
+
+  .main-calculation {
+    grid-template-columns: auto;
+  }
+}
+@media (max-width: 992px) {
+  .main-help__wrap {
+    flex-wrap: wrap;
+  }
+  .video-wrap {
+    video {
+      width: 100%;
+    }
+  }
+
+  .main-cargo {
+    &__wrap {
+      flex-direction: column;
+    }
+    &__text {
+      width: 100%;
+      text-align: justify;
+    }
+  }
+  .cargo-list {
+    width: 100%;
+    gap: 30px;
+    justify-items: center;
+  }
+
+  .main-paperwork__list,
+  .main-certificate__list {
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+  }
+  
+  .main-certificate__item {
+    width: 70%;
+  }
+}
