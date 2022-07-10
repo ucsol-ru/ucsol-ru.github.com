@@ -9,6 +9,14 @@
   .main-paperwork__list {
     grid-template-columns: 1fr !important;
   }
+
+  .page-link {
+    text-align: center;
+  }
+
+  .main-certificate__list h4 {
+    font-size: 0.85em;
+}
 }
 
 @media (max-width: 768px) {
